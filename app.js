@@ -339,4 +339,106 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.removeChild(link);
         });
     }
+
+    // 10. Delete Account Modal Logic
+    const deleteModal     = document.getElementById('deleteAccountModal');
+    const openDeleteBtn   = document.getElementById('openDeleteModalBtn');
+    const closeDeleteBtn  = document.getElementById('closeDeleteModalBtn');
+    const submitDeleteBtn = document.getElementById('submitDeleteBtn');
+    const deletePhoneInput = document.getElementById('deletePhoneInput');
+    const deleteErrorMsg  = document.getElementById('deleteErrorMsg');
+    const deleteFormArea  = document.getElementById('deleteFormArea');
+    const deleteSuccessArea = document.getElementById('deleteSuccessArea');
+
+    function openDeleteModal() {
+        if (deleteModal) {
+            // Reset state each time
+            if (deleteFormArea)   deleteFormArea.style.display = 'block';
+            if (deleteSuccessArea) deleteSuccessArea.style.display = 'none';
+            if (deletePhoneInput) deletePhoneInput.value = '';
+            if (deleteErrorMsg)   { deleteErrorMsg.style.display = 'none'; deleteErrorMsg.textContent = ''; }
+            if (submitDeleteBtn)  {
+                submitDeleteBtn.disabled = false;
+                document.getElementById('submitDeleteBtnText').textContent = 'Confirm Delete Request';
+            }
+            deleteModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeDeleteModal() {
+        if (deleteModal) {
+            deleteModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
+    if (openDeleteBtn)  openDeleteBtn.addEventListener('click', openDeleteModal);
+    if (closeDeleteBtn) closeDeleteBtn.addEventListener('click', closeDeleteModal);
+
+    // Close on backdrop click
+    if (deleteModal) {
+        deleteModal.addEventListener('click', (e) => {
+            if (e.target === deleteModal) closeDeleteModal();
+        });
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeDeleteModal();
+    });
+
+    // Submit delete request
+    if (submitDeleteBtn) {
+        submitDeleteBtn.addEventListener('click', async () => {
+            const phone = deletePhoneInput ? deletePhoneInput.value.trim() : '';
+
+            // Validate phone
+            if (!phone || phone.length !== 10 || isNaN(phone)) {
+                deleteErrorMsg.textContent = '⚠️ Please enter a valid 10-digit phone number.';
+                deleteErrorMsg.style.display = 'block';
+                return;
+            }
+
+            deleteErrorMsg.style.display = 'none';
+            submitDeleteBtn.disabled = true;
+            document.getElementById('submitDeleteBtnText').textContent = 'Processing...';
+
+            try {
+                if (!supabaseClient) throw new Error('Database connection unavailable.');
+
+                // Check if student exists with this phone
+                const { data: students, error: fetchErr } = await supabaseClient
+                    .from('students')
+                    .select('id, name, mobile')
+                    .eq('mobile', phone);
+
+                if (fetchErr) throw fetchErr;
+
+                if (!students || students.length === 0) {
+                    throw new Error('No account found with this phone number. Please check and try again.');
+                }
+
+                // Delete student record(s) matching this phone
+                const { error: deleteErr } = await supabaseClient
+                    .from('students')
+                    .delete()
+                    .eq('mobile', phone);
+
+                if (deleteErr) throw deleteErr;
+
+                // Show success
+                deleteFormArea.style.display = 'none';
+                deleteSuccessArea.style.display = 'block';
+
+            } catch (err) {
+                console.error('Account deletion error:', err);
+                deleteErrorMsg.textContent = '⚠️ ' + (err.message || 'Something went wrong. Please try again.');
+                deleteErrorMsg.style.display = 'block';
+                submitDeleteBtn.disabled = false;
+                document.getElementById('submitDeleteBtnText').textContent = 'Confirm Delete Request';
+            }
+        });
+    }
 });
+
