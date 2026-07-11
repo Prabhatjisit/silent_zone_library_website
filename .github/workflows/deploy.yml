@@ -3,27 +3,15 @@ name: Deploy to Server
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to production server
-        env:
-          HOST: ${{ secrets.SERVER_HOST }}
-          USERNAME: ${{ secrets.SERVER_USER }}
-          PORT: ${{ secrets.SERVER_PORT }}
-          KEY: ${{ secrets.SERVER_SSH_KEY }}
-          REPO_PATH: ${{ secrets.SERVER_REPO_PATH }}
-          BRANCH: ${{ github.ref_name }}
+      - name: Trigger deployment webhook
         run: |
-          echo "$KEY" > private_key
-          chmod 600 private_key
-          
-          ssh -o StrictHostKeyChecking=no \
-              -o UserKnownHostsFile=/dev/null \
-              -i private_key \
-              -p $PORT \
-              ${USERNAME}@${HOST} \
-              "cd $REPO_PATH && git pull origin $BRANCH"
+          curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d '{"ref": "${{ github.ref_name }}", "commit": "${{ github.sha }}"}' \
+            "https://deploy.aiwazir.com/hermes-deploy-2026"
