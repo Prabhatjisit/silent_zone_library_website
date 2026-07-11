@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>document.documentElement.classList.add('js-enabled');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Zone Library - Premium Study Space App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="brand">
+                <div class="brand-dot"></div>
+                Silent Zone Library
+            </a>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#video">App Video</a>
+                <a href="#register">Register Library</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="#download" class="btn-header">Download Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content reveal active">
+                <h1>Focus Deeply At <br><span class="gradient-text">Silent Zone Library</span></h1>
+                <p>Welcome to the ultimate digital companion for your study journey. Manage bookings, verify check-ins via face recognition scanner, track sitting hours, and secure your favorite seat from anywhere.</p>
+                
+                <div class="download-badges">
+                    <!-- Android Download Link -->
+                    <a href="./assets/apk/app-release.apk" download class="badge-btn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M17.52 14.37c-.38 0-.7-.31-.7-.7s.31-.7.7-.7.7.31.7.7-.32.7-.7.7zm-11.04 0c-.38 0-.7-.31-.7-.7s.31-.7.7-.7.7.31.7.7-.31.7-.7.7zm11.4-5.32l2.08-3.61c.1-.17.04-.39-.13-.49-.17-.1-.39-.04-.49.13l-2.11 3.65C15.82 7.73 14 7.25 12 7.25s-3.82.48-5.24 1.48L4.65 5.08c-.1-.17-.32-.23-.49-.13-.17.1-.23.32-.13.49l2.08 3.61C2.94 11.23 1 13.9 1 17h22c0-3.1-1.94-5.77-5.12-7.95zM3.05 18C3.02 18 3 18 3 18h18c0 0-.02 0-.05 0H3.05z"/>
+                        </svg>
+                        <div class="badge-text">
+                            <span>Get it for</span>
+                            <span>Android APK</span>
+                        </div>
+                    </a>
+                    <!-- Web Version Link -->
+                    <a href="https://libraryq.netlify.app/" target="_blank" class="badge-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 24px; height: 24px; stroke: #fff;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        <div class="badge-text">
+                            <span>Launch the</span>
+                            <span>Web Version</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual reveal">
+                <div class="hero-mockup-wrapper">
+                    <div class="hero-mockup-screen">
+                        <img src="assets/images/screenshot_2.png" alt="Silent Zone App Home" class="hero-mockup-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header reveal">
+            <h2>Designed for Modern Students</h2>
+            <p>We combine deep quiet rooms with cutting-edge tech. Track occupancy and secure your personal hub instantly.</p>
+        </div>
+        
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card reveal">
+                <div class="feature-icon-wrapper">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 11-2-2v-6a2 2 0 012-2zM5 11V9a2 2 0 012-2h10a2 2 0 012 2v2M5 11a2 2 0 00-2 2v6a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2H5z"></path>
+                    </svg>
+                </div>
+                <h3>Real-Time Seats Layout</h3>
+                <p>Browse a visual 40-seat grid map for every batch. See exactly which seats are taken and which are free before arriving.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="feature-card reveal">
+                <div class="feature-icon-wrapper">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0a8 8 0 11-16 0 8 8 0 0116 0z"></path>
+                    </svg>
+                </div>
+                <h3>QR Code Check-In</h3>
+                <p>Scan the official library QR code at the gate to check in and check out instantly. (Face scanning check-in coming next version!).</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="feature-card reveal">
+                <div class="feature-icon-wrapper">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3>Track Extra Sitting</h3>
+                <p>Easy-to-track sitting timers. Students can monitor their exact study duration and extra hours sitting in real-time.</p>
+            </div>
+            <!-- Feature 4 -->
+            <div class="feature-card reveal">
+                <div class="feature-icon-wrapper">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                    </svg>
+                </div>
+                <h3>AI Expiry Reminders</h3>
+                <p>Integrates LLMs to automatically trigger reminder notifications once subscriptions expire, sending alerts every 2 days.</p>
+            </div>
+            <!-- Feature 5 -->
+            <div class="feature-card reveal">
+                <div class="feature-icon-wrapper">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                    </svg>
+                </div>
+                <h3>Flexible Waiting List</h3>
+                <p>Register on the waiting list immediately if a batch is full. The Admin can allot any seat easily as soon as it becomes available.</p>
+            </div>
+            <!-- Feature 6 -->
+            <div class="feature-card reveal">
+                <div class="feature-icon-wrapper">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </div>
+                <h3>Direct Complain Ticket</h3>
+                <p>Facing a noise issue, slow WiFi, or broken desk? File a complaint ticket from the app and get resolved updates directly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots Dual Rows -->
+    <section class="screenshots" id="screenshots">
+        <div class="section-header reveal">
+            <h2>Explore the Interface</h2>
+            <p>Designed with a premium glassmorphic dark theme built for night-owl students and library managers.</p>
+        </div>
+        
+        <div class="section-content-wrapper">
+            <!-- Row 1: Student App -->
+            <div class="screenshot-row reveal">
+                <h3 class="row-title">Student App Experience</h3>
+                <div class="screenshot-scroll">
+                    <div class="screenshot-card">
+                        <img src="assets/images/screenshot_1.png" alt="Student Home Dashboard">
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="assets/images/screenshot_3.png" alt="Attendance Logs">
+                    </div>
+                     <div class="screenshot-card">
+                        <img src="assets/images/screenshot_5.png" alt="Attendance Logs">
+                        
+                    </div>
+                     <div class="screenshot-card">
+                        <img src="assets/images/screenshot_7.png" alt="Attendance Logs">
+                        
+                    </div>
+                     <div class="screenshot-card">
+                        <img src="assets/images/screenshot_9.png" alt="Attendance Logs">
+                        
+                    </div>
+            </div>
+
+            <!-- Row 2: Admin Panel -->
+            <div class="screenshot-row reveal">
+                <h3 class="row-title">Admin Management Panel</h3>
+                <div class="screenshot-scroll">
+                    <div class="screenshot-card">
+                        <img src="assets/images/screenshot_2.png" alt="Live Occupancy Map">
+                        
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="assets/images/screenshot_4.png" alt="Student Management Profile">
+                        
+                    </div>
+                     <div class="screenshot-card">
+                        <img src="assets/images/screenshot_6.png" alt="Student Management Profile">
+                       
+                    </div>
+                     <div class="screenshot-card">
+                        <img src="assets/images/screenshot_8.png" alt="Student Management Profile">
+                    </div>
+                     <div class="screenshot-card">
+                        <img src="assets/images/screenshot_10.png" alt="Student Management Profile">
+                      
+                    </div>
+                     <div class="screenshot-card">
+                        <img src="assets/images/screenshot_12.png" alt="Student Management Profile">
+                       
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Video Walkthrough Section -->
+    <section class="walkthrough-video" id="video">
+        <div class="section-header reveal">
+            <h2>See How It Works</h2>
+            <p>Explore the full capabilities of the system in our dedicated student and admin walkthrough videos.</p>
+        </div>
+        
+        <div class="video-grid reveal">
+            <!-- Left Player: Student App -->
+            <div class="video-card">
+                <h3>Student App Demo</h3>
+                <div class="video-phone-frame">
+                    <video controls poster="assets/images/screenshot_1.png">
+                        <source src="assets/videos/video-stu.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Right Player: Admin App -->
+            <div class="video-card">
+                <h3>Admin Panel Demo</h3>
+                <div class="video-phone-frame">
+                    <video controls poster="assets/images/screenshot_2.png">
+                        <source src="assets/videos/video-admin.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library Owner Registration -->
+    <section class="register-section" id="register">
+        <div class="section-header reveal">
+            <h2>Register Your Library Branch</h2>
+            <p>Deploy Silent Zone's management system at your branch. Create an account to log in as admin and get your printable attendance QR badge.</p>
+        </div>
+
+        <div class="register-container reveal">
+            <form id="registerForm" class="glass-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="libName">Library Name</label>
+                        <input type="text" id="libName" placeholder="e.g. Silent Zone - New Delhi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ownerName">Owner / Admin Name</label>
+                        <input type="text" id="ownerName" placeholder="e.g. Ramesh Kumar" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="adminPhone">Admin Phone Number (for app login)</label>
+                        <input type="tel" id="adminPhone" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
+                    </div>
+                    <div class="form-group">
+                        <label for="adminPassword">Admin Password</label>
+                        <input type="password" id="adminPassword" placeholder="Minimum 6 characters" required minlength="6">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Library Logo</label>
+                    <div class="upload-dropzone" id="logoDropzone">
+                        <input type="file" id="logoInput" accept="image/*" style="display: none;">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <p class="upload-text">Drag & drop your logo here, or <span class="highlight">browse</span></p>
+                        <p class="upload-subtext">Supports PNG, JPG (max 2MB)</p>
+                        <div class="logo-preview-container" id="logoPreviewContainer" style="display: none;">
+                            <img id="logoPreview" src="" alt="Logo Preview">
+                            <button type="button" class="btn-remove-logo" id="removeLogoBtn">&times;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="registerError" class="error-msg" style="display: none;"></div>
+
+                <button type="submit" class="btn-register" id="registerSubmitBtn">
+                    <span>Create Library Branch</span>
+                </button>
+            </form>
+
+            <!-- Success Overlay/Card -->
+            <div class="success-card" id="successCard" style="display: none;">
+                <div class="success-header">
+                    <div class="success-checkmark">✓</div>
+                    <h2>Branch Registered Successfully!</h2>
+                    <p>Your admin account is active. Log in to the mobile app using your phone number and password.</p>
+                </div>
+
+                <!-- Printable Badge Template -->
+                <div class="badge-print-area" id="badgePrintArea">
+                    <div class="badge-card">
+                        <div class="badge-header">
+                            <img class="badge-logo" id="badgeLogo" src="assets/images/logo.png" alt="Library Logo">
+                            <div class="badge-title-block">
+                                <h3 id="badgeLibName">Silent Zone Library</h3>
+                                <span>Official Attendance Point</span>
+                            </div>
+                        </div>
+                        <div class="badge-body">
+                            <div class="qr-wrapper">
+                                <img class="qr-image" id="badgeQrImage" src="" alt="Attendance QR Code">
+                            </div>
+                            <p class="qr-instructions">Scan this QR code using the Student App to Check In / Check Out</p>
+                        </div>
+                        <div class="badge-footer">
+                            <div class="brand">
+                                <div class="brand-dot"></div>
+                                Silent Zone Library System
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="success-actions">
+                    <button type="button" class="btn-action btn-secondary" id="btnDownloadQr">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                        Download Badge
+                    </button>
+                    <button type="button" class="btn-action btn-primary" id="btnPrintQr">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2m-2-9v11H8V9"/></svg>
+                        Print Badge
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="download-container reveal">
+            <h2 class="section-title">Currently available for Android and Web Version</h2>
+            <div class="app-cards-grid">
+                <!-- Android Card -->
+                <div class="app-card app-card-android">
+                    <div class="badge-status badge-status-available">
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        AVAILABLE NOW
+                    </div>
+                    <div class="app-card-content">
+                        <div class="app-icon-wrapper">
+                            <svg class="app-icon" viewBox="0 0 24 24">
+                                <path d="M17.52 14.37c-.38 0-.7-.31-.7-.7s.31-.7.7-.7.7.31.7.7-.32.7-.7.7zm-11.04 0c-.38 0-.7-.31-.7-.7s.31-.7.7-.7.7.31.7.7-.31.7-.7.7zm11.4-5.32l2.08-3.61c.1-.17.04-.39-.13-.49-.17-.1-.39-.04-.49.13l-2.11 3.65C15.82 7.73 14 7.25 12 7.25s-3.82.48-5.24 1.48L4.65 5.08c-.1-.17-.32-.23-.49-.13-.17.1-.23.32-.13.49l2.08 3.61C2.94 11.23 1 13.9 1 17h22c0-3.1-1.94-5.77-5.12-7.95zM3.05 18C3.02 18 3 18 3 18h18c0 0-.02 0-.05 0H3.05z"/>
+                            </svg>
+                        </div>
+                        <div class="app-details">
+                            <h3>Android APK</h3>
+                            <p>Download and install the app on your device.</p>
+                        </div>
+                    </div>
+                    <a href="./assets/apk/app-release.apk" download class="btn-download btn-download-primary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
+                        </svg>
+                        Download Android APK
+                    </a>
+                </div>
+
+                <!-- Web Version Card (Matching Android Style) -->
+                <div class="app-card app-card-web">
+                    <div class="badge-status badge-status-available">
+                        <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        AVAILABLE NOW
+                    </div>
+                    <div class="app-card-content">
+                        <div class="app-icon-wrapper">
+                            <svg class="app-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                        <div class="app-details">
+                            <h3>Web Version</h3>
+                            <p>Access the app instantly on any device via browser.</p>
+                        </div>
+                    </div>
+                    <a href="https://libraryq.netlify.app/" target="_blank" class="btn-download btn-download-primary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        Launch Web Version
+                    </a>
+                </div>
+
+                <!-- iOS Card -->
+                <div class="app-card app-card-ios">
+                    <div class="badge-status badge-status-coming">
+                        <svg class="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        COMING SOON
+                    </div>
+                    <div class="app-card-content">
+                        <div class="app-icon-wrapper">
+                            <svg class="app-icon" viewBox="0 0 24 24">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.22.67-2.94 1.5-.63.73-1.18 1.87-1.03 2.98 1.12.09 2.27-.58 2.98-1.42z"/>
+                            </svg>
+                        </div>
+                        <div class="app-details">
+                            <h3>iPhone (iOS)</h3>
+                            <p>The iOS version is coming soon.</p>
+                        </div>
+                    </div>
+                    <a href="#download" class="btn-download btn-download-outline">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        Coming Soon
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; 2026 Silent Zone Library. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#features">Features</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#video">App Video</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Supabase JS Client Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Custom App Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>
