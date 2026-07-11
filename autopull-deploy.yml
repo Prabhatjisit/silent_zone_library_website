@@ -1,0 +1,29 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main  # or your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to production server
+        env:
+          HOST: ${{ secrets.SERVER_HOST }}
+          USERNAME: ${{ secrets.SERVER_USER }}
+          PORT: ${{ secrets.SERVER_PORT }}
+          KEY: ${{ secrets.SERVER_SSH_KEY }}
+          REPO_PATH: ${{ secrets.SERVER_REPO_PATH }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          echo "$KEY" > private_key
+          chmod 600 private_key
+          
+          ssh -o StrictHostKeyChecking=no \
+              -o UserKnownHostsFile=/dev/null \
+              -i private_key \
+              -p $PORT \
+              ${USERNAME}@${HOST} \
+              "cd $REPO_PATH && git pull origin $BRANCH"
